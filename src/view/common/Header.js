@@ -18,7 +18,7 @@ const Header = () => {
         right: 0,
         zIndex: 999,
         height: "100%",
-        position: "relative",
+        position: "sticky",
       }}
     >
       <div style={{ backgroundColor: "#f1f1f1" }}>
@@ -68,6 +68,8 @@ const Navbar = styled.div`
   align-items: center;
   height: 80px;
   padding: 0 10px;
+  position: sticky;
+  top: 0;
 `;
 
 const LogoBox = styled.div`
