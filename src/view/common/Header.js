@@ -28,10 +28,11 @@ const Header = () => {
               <LogoImg src="./img/logo.png" alt="Logo" />
             </LogoBox>
             <Menu>
-              <CustomLink to="/">Home</CustomLink>
-              <CustomLink to="/about">About us</CustomLink>
-              <CustomLink to="/contact">Contact us</CustomLink>
-              <CustomLink to="/services">Services</CustomLink>
+              <CustomLink to="#home">Home</CustomLink>
+              <CustomLink to="#services">Services</CustomLink>
+              <CustomLink to="#portfolio">Portfolio</CustomLink>
+              <CustomLink to="#team">Team</CustomLink>
+              <CustomLink to="#contact">Contact</CustomLink>
               <Button>REQUEST QUOTE</Button>
             </Menu>
             <MobileMenu>
@@ -44,10 +45,11 @@ const Header = () => {
       </div>
       <div style={{ position: "relative" }}>
         <MobileMenuItem hidden={!isOpen}>
-          <MobileCustomLink to="/">Home</MobileCustomLink>
-          <MobileCustomLink to="/about">About us</MobileCustomLink>
-          <MobileCustomLink to="/contact">Contact us</MobileCustomLink>
-          <MobileCustomLink to="/services">Services</MobileCustomLink>
+          <MobileCustomLink to="#">Home</MobileCustomLink>
+          <MobileCustomLink to="#services">Services</MobileCustomLink>
+          <MobileCustomLink to="#portfolio">Portfolio</MobileCustomLink>
+          <MobileCustomLink to="#team">Team</MobileCustomLink>
+          <MobileCustomLink to="#contact">Contact</MobileCustomLink>
           <MobileButton>REQUEST QUOTE</MobileButton>
         </MobileMenuItem>
       </div>
@@ -91,46 +93,47 @@ const Menu = styled.div`
 `;
 
 const CustomLink = styled(Link)`
-  cursor: pointer;
   text-decoration: none;
-  position: relative;
-  padding: 10px 20px;
-  background: var(--color--primary-bg-light);
+  display: block;
+  padding: 10px 7px;
   font-size: 20px;
   font-weight: 700;
-  color: var(--color--primary);
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  transition: all 1s;
-  &:after,
+
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    #d17f1b,
+    #d17f1b 50%,
+    var(--color--primary) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.5s ease-in-out;
   &:before {
-    content: " ";
-    width: 10px;
-    height: 10px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 3px;
+    bottom: 5px;
+    left: 0;
+    bottom: -3px;
+    z-index: 0;
     position: absolute;
-    border: 0px solid #fff;
-    transition: all 0.5s;
+    background: #d17f1b;
+    transition: all 0.5s ease-in-out;
   }
-  &:after {
-    top: -1px;
-    left: -1px;
-    border-top: 2px solid var(--color--primary);
-    border-left: 2px solid var(--color--primary);
-  }
-  &:before {
-    bottom: -1px;
-    right: -1px;
-    border-bottom: 2px solid var(--color--primary);
-    border-right: 2px solid var(--color--primary);
-  }
+
   &:hover {
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    &:before,
-    &:after {
-      width: 100%;
-      height: 100%;
-    }
+    background-position: 0%;
+  }
+
+  &:hover:before {
+    width: 100%;
   }
 `;
 
@@ -184,6 +187,7 @@ const MobileCustomLink = styled(Link)`
   &:hover {
     color: var(--color--primary-mobile--hover);
     background-color: var(--color--primary--mobile--bg);
+    border-left: 3px solid var(--color--primary);
   }
 `;
 
