@@ -3,11 +3,12 @@ import styled from "styled-components";
 
 const Service = () => {
   return (
-    <Container>
-      <div style={{ width: "80%", margin: "0 auto" }}>
+    <>
+      <Contain>
         <TitleBox>
-          <Title>Services</Title>
-          <SubTitle>Our Best Services</SubTitle>
+          <Title>
+            Let's Our <span style={{ color: "#d17f1b" }}>Services</span>
+          </Title>
           <Text>
             Retaining customer base is important for any enterprise, it takes
             great effort to make good customer relationship and minute error can
@@ -23,82 +24,89 @@ const Service = () => {
             better ROI.
           </Text>
         </TitleBox>
-        <Card>
-          <CardItem>
-            <Icon>
-              <i style={{ fontSize: "60px" }} class="fa-brands fa-apple"></i>
-            </Icon>
-            <CardTitle>iOS Development</CardTitle>
-            <CardText>
-              Master in advancement of modern iOS apps for iPhones advertising
-              full-spectrum, end-to conclusion administrations for custom
-              versatile application.
-            </CardText>
-          </CardItem>
-          <CardItem>
-            <Icon>
-              <i style={{ fontSize: "60px" }} class="fa-brands fa-android"></i>
-            </Icon>
-            <CardTitle>Android Development</CardTitle>
-            <CardText>
-              Especially experienced and devoted to execute the power-packed
-              usefulness of Android apps by advanced approach and innovation.
-            </CardText>
-          </CardItem>
-          <CardItem>
-            <Icon>
-              <i
-                style={{ fontSize: "60px" }}
-                class="fa-solid fa-laptop-code"
-              ></i>
-            </Icon>
-            <CardTitle>Web Development</CardTitle>
-            <CardText>
-              Specialized in creating exceedingly locks in web arrangements that
-              will assist you to rule the advanced commercial center.
-            </CardText>
-          </CardItem>
-          <CardItem>
-            <Icon>
-              <i style={{ fontSize: "60px" }} class="fa-brands fa-react"></i>
-            </Icon>
-            <CardTitle>React Development</CardTitle>
-            <CardText>
-              We are capable in creating iOS and Android apps utilizing the most
-              recent Respond Local Cross Stage that best suits to drive your
-              trade.
-            </CardText>
-          </CardItem>
-          <CardItem>
-            <Icon>
-              <i
-                style={{ fontSize: "60px" }}
-                class="fa-solid fa-business-time"
-              ></i>
-            </Icon>
-            <CardTitle>Business Analyst</CardTitle>
-            <CardText>
-              The competitive scenario of business has called for efficient
-              operational activities, leveraging investment cost and overall
-              high profitability.
-            </CardText>
-          </CardItem>
-          <CardItem>
-            <Icon>
-              <i
-                style={{ fontSize: "60px" }}
-                class="fa-solid fa-compass-drafting fa-lg"
-              ></i>
-            </Icon>
-            <CardTitle>UI/UX Designer</CardTitle>
-            <CardText>
-              Center on giving client-centric planning, astounding ease of use
-              with impressive visual to the site by top-notch UI/UX plan.
-            </CardText>
-          </CardItem>
-        </Card>
-      </div>
-    </Container>
+      </Contain>
+      <Container>
+        <div style={{ width: "80%", margin: "0 auto" }}>
+          <Card>
+            <CardItem>
+              <Icon>
+                <i style={{ fontSize: "60px" }} class="fa-brands fa-apple"></i>
+              </Icon>
+              <CardTitle>iOS Development</CardTitle>
+              <CardText>
+                Master in advancement of modern iOS apps for iPhones advertising
+                full-spectrum, end-to conclusion administrations for custom
+                versatile application.
+              </CardText>
+            </CardItem>
+            <CardItem>
+              <Icon>
+                <i
+                  style={{ fontSize: "60px" }}
+                  class="fa-brands fa-android"
+                ></i>
+              </Icon>
+              <CardTitle>Android Development</CardTitle>
+              <CardText>
+                Especially experienced and devoted to execute the power-packed
+                usefulness of Android apps by advanced approach and innovation.
+              </CardText>
+            </CardItem>
+            <CardItem>
+              <Icon>
+                <i
+                  style={{ fontSize: "60px" }}
+                  class="fa-solid fa-laptop-code"
+                ></i>
+              </Icon>
+              <CardTitle>Web Development</CardTitle>
+              <CardText>
+                Specialized in creating exceedingly locks in web arrangements
+                that will assist you to rule the advanced commercial center.
+              </CardText>
+            </CardItem>
+            <CardItem>
+              <Icon>
+                <i style={{ fontSize: "60px" }} class="fa-brands fa-react"></i>
+              </Icon>
+              <CardTitle>React Development</CardTitle>
+              <CardText>
+                We are capable in creating iOS and Android apps utilizing the
+                most recent Respond Local Cross Stage that best suits to drive
+                your trade.
+              </CardText>
+            </CardItem>
+            <CardItem>
+              <Icon>
+                <i
+                  style={{ fontSize: "60px" }}
+                  class="fa-solid fa-business-time"
+                ></i>
+              </Icon>
+              <CardTitle>Business Analyst</CardTitle>
+              <CardText>
+                The competitive scenario of business has called for efficient
+                operational activities, leveraging investment cost and overall
+                high profitability.
+              </CardText>
+            </CardItem>
+            <CardItem>
+              <Icon>
+                <i
+                  style={{ fontSize: "60px" }}
+                  class="fa-solid fa-compass-drafting fa-lg"
+                ></i>
+              </Icon>
+              <CardTitle>UI/UX Designer</CardTitle>
+              <CardText>
+                Center on giving client-centric planning, astounding ease of use
+                with impressive visual to the site by top-notch UI/UX plan.
+              </CardText>
+            </CardItem>
+          </Card>
+        </div>
+      </Container>
+    </>
   );
 };
 
@@ -128,41 +136,33 @@ const Container = styled.div`
   }
 `;
 
+const Contain = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+`;
+
 const TitleBox = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
 `;
 
 const Title = styled.p`
-  border: 2px solid black;
-  color: black;
-  border-radius: 30px;
-  padding: 10px 30px;
-  margin: 20px 0;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.5s;
-  &:hover {
-    color: black;
-    background-color: #d17f1b;
-    transition: all 0.5s;
-  }
-`;
-
-const SubTitle = styled.h1`
-  color: black;
+  color: var(--color--primary);
+  border-bottom: 3px solid #d17f1b;
+  padding: 10px;
   font-size: 40px;
   font-weight: 700;
-  text-align: center;
 `;
 
 const Text = styled.p`
-  color: black;
+  color: var(--color--primary);
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
   padding: 10px 0;
   text-align: center;
   line-height: 1.5;
@@ -203,6 +203,7 @@ const Icon = styled.div`
 `;
 const CardItem = styled.div`
 min-height: 350px;
+margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -214,8 +215,7 @@ min-height: 350px;
   &:hover {
     transform: scale(1.05); / Increase the size on hover /
     transition: transform 0.3s ease;
-    box-shadow: 1px 1px 3px 0 black,
-    0 10px 80px 0 black;
+    box-shadow: 0 0 30px 0 black;
     & > ${Icon} {
       color: black;
       background-color: #d17f1b;
