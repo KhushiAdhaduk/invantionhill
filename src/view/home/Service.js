@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Service = () => {
   return (
     <Container>
-      <div style={{ width: "90%", margin: "0 auto" }}>
+      <div style={{ width: "80%", margin: "0 auto" }}>
         <TitleBox>
           <Title>Services</Title>
           <SubTitle>Our Best Services</SubTitle>
@@ -106,7 +106,6 @@ export default Service;
 
 const Container = styled.div`
   position: relative;
-  margin-top: 30px;
   &:before {
     content: "";
     background: url("./img/bg-service.jpg");
@@ -177,6 +176,9 @@ const Card = styled.div`
   align-items: center;
   margin: 0;
   padding: 0;
+  @media (max-width: 1125px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   @media (max-width: 990px) {
     flex-direction: column;
     align-items: center;
@@ -189,7 +191,6 @@ const Card = styled.div`
 
 const Icon = styled.div`
   padding: 10px;
-  //   border: 3px solid black;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -199,14 +200,9 @@ const Icon = styled.div`
   color: #666;
   background-color: #333;
   transition: all 0.3s;
-  &:hover {
-    color: black;
-    background-color: #d17f1b;
-    transition: all 0.3s;
-  }
 `;
-
 const CardItem = styled.div`
+min-height: 350px;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -214,17 +210,25 @@ const CardItem = styled.div`
   border-radius: 10px;
   padding: 40px 30px;
   transition: transform 0.3s ease;
-  box-shadow: 1px 1px 3px 0 rgba(70, 88, 106, 0.16),
-    0 20px 80px 0 rgba(0, 0, 0, 0.05);
+  
   &:hover {
     transform: scale(1.05); / Increase the size on hover /
     transition: transform 0.3s ease;
+    box-shadow: 1px 1px 3px 0 black,
+    0 10px 80px 0 black;
+    & > ${Icon} {
+      color: black;
+      background-color: #d17f1b;
+
+    }
   }
   @media (max-width: 850px) {
     align-items: center;
     justify-content: center;
   }
 `;
+
+// rest of your code
 
 const CardTitle = styled.p`
   color: black;
