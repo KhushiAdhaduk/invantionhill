@@ -171,7 +171,7 @@ const Text = styled.p`
 const Card = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 10px;
   justify-content: space-between;
   align-items: center;
   margin: 0;
