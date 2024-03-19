@@ -231,8 +231,8 @@ margin: 20px;
 // rest of your code
 
 const CardTitle = styled.p`
-  color: black;
-  font-size: 1em;
+  color:black
+  font-size: 1.5em;
   font-weight: 700;
   padding: 10px 0;
   line-height: 1.5;
