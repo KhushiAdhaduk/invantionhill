@@ -33,7 +33,9 @@ const Header = () => {
               <CustomLink to="#portfolio">Portfolio</CustomLink>
               <CustomLink to="#team">Team</CustomLink>
               <CustomLink to="#contact">Contact</CustomLink>
-              <Button>REQUEST QUOTE</Button>
+              <Link to="/request">
+                <Button>REQUEST QUOTE</Button>
+              </Link>
             </Menu>
             <MobileMenu>
               <IconButton sx={{ color: "var(--color--primary)" }}>
@@ -140,7 +142,6 @@ const CustomLink = styled(Link)`
 const Button = styled.button`
   background-color: var(--color--primary);
   color: white;
-  border: none;
   padding: 12px 22px;
   font-size: 15px;
   font-weight: 800;
@@ -174,7 +175,7 @@ const MobileMenuItem = styled.div`
   width: 80%;
   margin: 0 auto;
   transition: height 0.5s ease-in-out;
-  height: ${(props) => (props.hidden ? "0" : "60vh")};
+  height: ${(props) => (props.hidden ? "0" : "45vh")};
 `;
 
 const MobileCustomLink = styled(Link)`

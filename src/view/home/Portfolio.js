@@ -35,18 +35,18 @@ const allWork = [
   },
   {
     img: "./img/pf1-4.jpg",
-    title: "Business Analyst",
-    desc: "The competitive scenario of business has called for efficient operational activities, leveraging investment cost and overall high profitability.",
+    title: "Digital Marketing",
+    desc: "Web based advertising, otherwise called advanced promoting, is the key business device for ventures today as it empowers them to saddle the intensity of the web to take their business to the following level.",
   },
   {
     img: "./img/pf1-5.jpg",
-    title: "UI/UX Designer",
-    desc: "The competitive scenario of business has called for efficient operational activities, leveraging investment cost and overall high profitability.",
+    title: "SEO Service",
+    desc: "A site ought to be advanced for web search tools to be noticeable and get its objective traffic. We offer solid SEO administrations that drive your site to top inquiry rankings and increment your online reach.",
   },
   {
     img: "./img/pf1-6.jpg",
-    title: "React Development",
-    desc: "We are capable in creating iOS and Android apps utilizing the most recent Respond Local Cross Stage that best suits to drive your trade.",
+    title: "Product Design",
+    desc: "Product design is the process designers use to blend user needs with business goals to help brands make consistently successful products. Product designers work to optimize the user experience in the solutions they make for their users-and help their brands by making products sustainable for longer-term business needs.",
   },
 ];
 
@@ -301,19 +301,21 @@ const TabTitle = styled.div`
     background: #d17f1b;
     transition: all 0.5s ease-in-out;
   }
-
-  ${(props) =>
-    !props.active &&
-    `
-    &:hover {
-      background-position: 0%;
-
-    }
-    `}
+  &:hover {
+    background-position: 0%;
+  }
 
   &:hover:before {
     width: 100%;
   }
+  ${(props) =>
+    props.active &&
+    `background-position: 0%;
+&:before {
+  width: 100%;
+}
+`}
+
   @media (max-width: 1200px) {
     margin: 0.2rem;
     padding: 0.2rem;
@@ -324,15 +326,13 @@ const Text = styled.p`
   font-size: 16px;
   margin: 0;
   white-space: nowrap;
-  @media (max-width: 980px) {
-    font-size: 12px;
-  }
 `;
 
 const FlexBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
   @media (max-width: 800px) {
     flex-wrap: wrap;
   }
