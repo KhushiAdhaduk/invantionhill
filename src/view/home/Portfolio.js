@@ -21,7 +21,7 @@ const allWork = [
   {
     img: "./img/pf1-1.jpg",
     title: "Graphics Design",
-    desc: "UI/UX is the first thing that interacts with the users and so needs to be impeccable. Open xcell has a highly creative user experience research and design team.",
+    desc: "UI/UX is the first thing that interacts with the users and so needs to be impeccable. Open xcel has a highly creative user experience research and design team.",
   },
   {
     img: "./img/pf1-2.jpg",
@@ -61,7 +61,7 @@ const iosDevelopment = [
   {
     img: "./img/pf1-1.jpg",
     title: "Graphics Design",
-    desc: "UI/UX is the first thing that interacts with the users and so needs to be impeccable. Open xcell has a highly creative user experience research and design team.",
+    desc: "UI/UX is the first thing that interacts with the users and so needs to be impeccable. Open xcel has a highly creative user experience research and design team.",
   },
   {
     img: "./img/pf1-3.jpg",
@@ -81,7 +81,7 @@ const androidDevelopment = [
   {
     img: "./img/pf1-1.jpg",
     title: "Graphics Design",
-    desc: "UI/UX is the first thing that interacts with the users and so needs to be impeccable. Open xcell has a highly creative user experience research and design team.",
+    desc: "UI/UX is the first thing that interacts with the users and so needs to be impeccable. Open xcel has a highly creative user experience research and design team.",
   },
   {
     img: "./img/pf1-3.jpg",

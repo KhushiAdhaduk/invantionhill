@@ -84,7 +84,7 @@ const Contact = () => {
                     fontSize: "19px",
                     wordWrap: "break-word",
                   }}
-                  href="mailto:inventionhill@gmailcom"
+                  href="mailto:inventionhill@gmail.com"
                 >
                   inventionhill@gmail.com
                 </a>
