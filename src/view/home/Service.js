@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Service = () => {
   return (
     <>
-      <Contain>
+      <Contain id="services">
         <TitleBox>
           <Title>
             Let's Our <span style={{ color: "#d17f1b" }}>Services</span>

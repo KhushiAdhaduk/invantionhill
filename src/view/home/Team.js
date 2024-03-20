@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Team = () => {
   return (
     <>
-      <TitleBox>
+      <TitleBox id="team">
         <Title>
           Our Creative <span style={{ color: "#d17f1b" }}>Team</span>
         </Title>
@@ -29,7 +29,7 @@ const Team = () => {
           <TeamItem>
             <Img src="./img/team_men.jpg" alt="Team1" />
             <Name>Vrushik Kardani</Name>
-            <Position>jr.Fullstack Developer</Position>
+            <Position>Jr.Fullstack Developer</Position>
           </TeamItem>
           <TeamItem>
             <Img src="./img/team_women.jpg" alt="Team1" />
@@ -133,11 +133,11 @@ const TeamItem = styled.div`
   display: flex;
   flex-direction: column;
   gap: 13px;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
   border: 1px solid #f1f1f1;
   &:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    background-color: #dddddd;
+    background-color: var(--color--primary);
     transition: 0.4s ease-in-out;
   }
   @media (max-width: 395px) {
@@ -148,15 +148,15 @@ const TeamItem = styled.div`
 const Img = styled.img`
   position: relative;
   overflow: hidden;
-  border-radius: 8px 8px 0 0;
+  border-radius: 50%;
   width: 100%;
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  &:hover {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+  ${TeamItem}:hover & {
+    -webkit-transform: scale(0.94);
+    transform: scale(0.94);
   }
   @media (max-width: 395px) {
     width: 100%;
@@ -169,6 +169,9 @@ const Name = styled.h1`
   font-size: 25px;
   font-weight: 700;
   word-break: break-word;
+  ${TeamItem}:hover & {
+    color: white;
+  }
 `;
 
 const Position = styled.p`
@@ -177,4 +180,8 @@ const Position = styled.p`
   font-weight: 500;
   text-align: center;
   line-height: 1.5;
+  padding-bottom: 10px;
+  ${TeamItem}:hover & {
+    color: #d17f1b;
+  }
 `;

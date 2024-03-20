@@ -143,7 +143,7 @@ const Portfolio = () => {
   };
   return (
     <>
-      <TitleBox>
+      <TitleBox id="portfolio">
         <Title>
           Our Recent <span style={{ color: "#d17f1b" }}>Works</span>
         </Title>
@@ -314,9 +314,9 @@ const TabTitle = styled.div`
   ${(props) =>
     props.active &&
     `background-position: 0%;
-&:before {
-  width: 100%;
-}
+        &:before {
+          width: 100%;
+        }
 `}
 
   @media (max-width: 1200px) {

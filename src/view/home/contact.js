@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Contact = () => {
   return (
     <>
-      <Contain>
+      <Contain id="contact">
         <TitleBox>
           <Title>
             Let's <span style={{ color: "#d17f1b" }}>Talk</span>
@@ -74,9 +74,20 @@ const Contact = () => {
                   ></i>
                   Email
                 </DesTitle>
-                <DesText style={{ marginLeft: "40px" }}>
+                <a
+                  style={{
+                    marginLeft: "40px",
+                    cursor: "pointer",
+                    textDecoration: "none",
+                    color: "var(--color--primary)",
+                    fontWeight: "500",
+                    fontSize: "19px",
+                    wordWrap: "break-word",
+                  }}
+                  href="mailto:inventionhill@gmailcom"
+                >
                   inventionhill@gmail.com
-                </DesText>
+                </a>
               </ContactItem>
               <ContactItem>
                 <DesTitle>
@@ -86,11 +97,9 @@ const Contact = () => {
                   ></i>
                   Office Hours
                 </DesTitle>
-                <DesText>
-                  <DesText style={{ marginLeft: "20px" }}>
-                    Monday to Friday
-                  </DesText>
-                  <DesText style={{ marginLeft: "20px" }}>10 am to 7pm</DesText>
+                <DesText style={{ marginLeft: "20px" }}>
+                  <DesText>Monday to Friday</DesText>
+                  <DesText>10 am to 7pm</DesText>
                 </DesText>
               </ContactItem>
             </LeftItem>
@@ -196,9 +205,8 @@ const DesTitle = styled.h3`
 const DesText = styled.p`
   color: var(--color--primary);
   margin-left: 15px;
-  opacity: 0.8;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
   word-wrap: break-word;
 `;

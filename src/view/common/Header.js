@@ -25,14 +25,16 @@ const Header = () => {
         <Container>
           <Navbar>
             <LogoBox>
-              <LogoImg src="./img/logo.png" alt="Logo" />
+              <Link to="/">
+                <LogoImg src="./img/logo.png" alt="Logo" />
+              </Link>
             </LogoBox>
             <Menu>
-              <CustomLink to="#home">Home</CustomLink>
-              <CustomLink to="#services">Services</CustomLink>
-              <CustomLink to="#portfolio">Portfolio</CustomLink>
-              <CustomLink to="#team">Team</CustomLink>
-              <CustomLink to="#contact">Contact</CustomLink>
+              <CustomLink href="#home">Home</CustomLink>
+              <CustomLink href="#services">Services</CustomLink>
+              <CustomLink href="#portfolio">Portfolio</CustomLink>
+              <CustomLink href="#team">Team</CustomLink>
+              <CustomLink href="#contact">Contact</CustomLink>
               <Link to="/request">
                 <Button>REQUEST QUOTE</Button>
               </Link>
@@ -47,11 +49,11 @@ const Header = () => {
       </div>
       <div style={{ position: "relative" }}>
         <MobileMenuItem hidden={!isOpen}>
-          <MobileCustomLink to="#">Home</MobileCustomLink>
-          <MobileCustomLink to="#services">Services</MobileCustomLink>
-          <MobileCustomLink to="#portfolio">Portfolio</MobileCustomLink>
-          <MobileCustomLink to="#team">Team</MobileCustomLink>
-          <MobileCustomLink to="#contact">Contact</MobileCustomLink>
+          <MobileCustomLink href="#">Home</MobileCustomLink>
+          <MobileCustomLink href="#services">Services</MobileCustomLink>
+          <MobileCustomLink href="#portfolio">Portfolio</MobileCustomLink>
+          <MobileCustomLink href="#team">Team</MobileCustomLink>
+          <MobileCustomLink href="#contact">Contact</MobileCustomLink>
           <Link to="/request.">
             <MobileButton>REQUEST QUOTE</MobileButton>
           </Link>
@@ -96,7 +98,7 @@ const Menu = styled.div`
   }
 `;
 
-const CustomLink = styled(Link)`
+const CustomLink = styled.a`
   text-decoration: none;
   display: block;
   padding: 10px 7px;
@@ -180,7 +182,7 @@ const MobileMenuItem = styled.div`
   height: ${(props) => (props.hidden ? "0" : "45vh")};
 `;
 
-const MobileCustomLink = styled(Link)`
+const MobileCustomLink = styled.a`
   display: block;
   padding: 15px 10px;
   color: var(--color--primary);
