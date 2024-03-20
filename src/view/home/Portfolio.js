@@ -257,7 +257,7 @@ const ImgText = styled.p`
 const TitleBox = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 40px;
   flex-direction: column;
   align-items: center;
 `;
@@ -267,6 +267,9 @@ const Title = styled.p`
   border-bottom: 3px solid #d17f1b;
   font-size: 40px;
   font-weight: 700;
+  @media (max-width: 480px) {
+    font-size: 30px;
+  }
 `;
 const TabTitle = styled.div`
   margin: 2rem;
@@ -323,9 +326,12 @@ const TabTitle = styled.div`
 `;
 
 const Text = styled.p`
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   white-space: nowrap;
+  @media (max-width: 553px) {
+    font-size: 13px;
+  }
 `;
 
 const FlexBox = styled.div`

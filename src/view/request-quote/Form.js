@@ -5,18 +5,20 @@ const Form = () => {
   return (
     <>
       <Container>
-        <FormBox>
-          <Title>REQUEST QUOTE</Title>
-          <SubTitle>Ready to Get Started</SubTitle>
+        <Content>
+          <FormBox>
+            <Title>REQUEST QUOTE</Title>
+            <SubTitle>Ready to Get Started</SubTitle>
 
-          <Input type="text" placeholder="Your Name" />
-          <Input type="email" placeholder="Email" />
-          <Input type="text" placeholder="Subject" />
-          <Input type="textarea" placeholder="Message" />
-          <Btn>
-            <Button>Submit</Button>
-          </Btn>
-        </FormBox>
+            <Input type="text" placeholder="Your Name" />
+            <Input type="email" placeholder="Email" />
+            <Input type="text" placeholder="Subject" />
+            <Input type="textarea" placeholder="Message" />
+            <Btn>
+              <Button>Submit</Button>
+            </Btn>
+          </FormBox>
+        </Content>
       </Container>
     </>
   );
@@ -26,7 +28,7 @@ export default Form;
 
 const Container = styled.div`
   position: relative;
-  height: 92.7vh;
+  height: 91.7vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,6 +47,16 @@ const Container = styled.div`
   }
 `;
 
+const Content = styled.div`
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--color--primary);
+  backdrop-filter: blur(10px);
+  @media (max-width: 440px) {
+    width: 95%;
+  }
+`;
+
 const FormBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -57,6 +69,9 @@ const Title = styled.h2`
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 10px;
+  @media (max-width: 440px) {
+    font-size: 25px;
+  }
 `;
 
 const SubTitle = styled.h3`
@@ -64,6 +79,9 @@ const SubTitle = styled.h3`
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
+  @media (max-width: 440px) {
+    font-size: 15px;
+  }
 `;
 
 const Input = styled.input`
@@ -86,12 +104,17 @@ const Button = styled.button`
   font-weight: 800;
   cursor: pointer;
   border-radius: 5px;
+  transition: all 0.7s ease-in-out;
   &:hover {
     color: var(--color--primary);
     border-radius: 50px;
     border: 2px solid var(--color--primary);
     background-color: var(--color--primary--bg-light);
-    transition: all 0.3s ease 0s;
+    transition: all 0.7s ease-in-out;
+  }
+  @media (max-width: 440px) {
+    width: 30%;
+    font-size: 13px;
   }
 `;
 

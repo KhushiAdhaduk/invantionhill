@@ -154,16 +154,19 @@ const TitleBox = styled.div`
 const Title = styled.p`
   color: var(--color--primary);
   border-bottom: 3px solid #d17f1b;
-  padding: 10px;
+  margin-top: 20px;
   font-size: 40px;
   font-weight: 700;
+  @media (max-width: 480px) {
+    font-size: 30px;
+  }
 `;
 
 const Text = styled.p`
   color: var(--color--primary);
-  font-size: 1em;
+  font-size: 18px;
   font-weight: 600;
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
   line-height: 1.5;
 `;
@@ -231,16 +234,16 @@ margin: 20px;
 // rest of your code
 
 const CardTitle = styled.p`
-  color:black
+  color: black;
   font-size: 1.5em;
-  font-weight: 700;
+  font-weight: 800;
   padding: 10px 0;
   line-height: 1.5;
 `;
 
 const CardText = styled.p`
   color: black;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 500;
   padding: 10px 0;
   line-height: 1.5;

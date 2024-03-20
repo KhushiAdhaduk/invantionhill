@@ -52,7 +52,9 @@ const Header = () => {
           <MobileCustomLink to="#portfolio">Portfolio</MobileCustomLink>
           <MobileCustomLink to="#team">Team</MobileCustomLink>
           <MobileCustomLink to="#contact">Contact</MobileCustomLink>
-          <MobileButton>REQUEST QUOTE</MobileButton>
+          <Link to="/request.">
+            <MobileButton>REQUEST QUOTE</MobileButton>
+          </Link>
         </MobileMenuItem>
       </div>
     </div>
