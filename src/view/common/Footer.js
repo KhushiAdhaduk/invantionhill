@@ -15,12 +15,12 @@ const Footer = () => {
                   <CustomLink to="/logo-design">Logo Design</CustomLink>
                 </Li>
                 <Li>
-                  <CustomLink>Custom Web Development</CustomLink>
+                  <CustomLink to="/custom-web">
+                    Custom Web Development
+                  </CustomLink>
                 </Li>
                 <Li>
-                  <CustomLink to="/mobile-theme-development">
-                    Mobile Responsive Theme Development
-                  </CustomLink>
+                  <CustomLink>Mobile Responsive Theme Development</CustomLink>
                 </Li>
                 <Li>
                   <CustomLink>Website Design</CustomLink>
@@ -112,6 +112,15 @@ const FooterContain = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
+  @media (max-width: 996px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const FooterItem = styled.div`

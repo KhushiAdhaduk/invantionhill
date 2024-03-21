@@ -44,7 +44,7 @@ const Logo = () => {
             sure that your clients gets impressed by the first view. Our team of
             experts and creative graphic designers make sure that you have
             unique design and related to your business logo. We do not adopt the
-            available custom design logo but create personalised logo design. We
+            available custom design logo but create personalized logo design. We
             firstly understand your business idea, looks upon who are your
             targeted customers and than create the logo for you. Once created
             the logo we will ask for your changes and feedback accordingly we
@@ -87,6 +87,7 @@ const LogoTitle = styled.h1`
 
 const Contain = styled.div`
   display: flex;
+  justify-content: space-between;
   max-width: 1280px;
   margin: 50px auto;
   @media (max-width: 990px) {
@@ -98,7 +99,7 @@ const Contain = styled.div`
 `;
 
 const LogoLeft = styled.div`
-  width: 50%;
+  width: 45%;
   @media (max-width: 990px) {
     width: 100%;
   }
@@ -107,6 +108,7 @@ const LogoLeft = styled.div`
 const Title = styled.p`
   color: var(--color--primary);
   font-size: 45px;
+  font-weight: 700;
   padding: 10px 0;
   &:after {
     background-color: #d17f1b;
@@ -125,19 +127,19 @@ const Text = styled.p`
   color: black;
   font-size: 20px;
   padding: 10px 0;
-  opacity: 0.8;
+  opacity: 0.7;
   @media (max-width: 990px) {
     font-size: 16px;
   }
 `;
 
 const LogoRight = styled.div`
-  width: 50%;
+  width: 45%;
   @media (max-width: 990px) {
     width: 100%;
   }
 `;
 
 const Img = styled.img`
-  width: 80%;
+  width: 90%;
 `;
