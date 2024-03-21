@@ -79,14 +79,14 @@ const IosDevelopment = () => {
 
 const androidDevelopment = [
   {
-    img: "./img/pf1-1.jpg",
-    title: "Graphics Design",
-    desc: "UI/UX is the first thing that interacts with the users and so needs to be impeccable. Open xcel has a highly creative user experience research and design team.",
-  },
-  {
     img: "./img/pf1-3.jpg",
     title: "App Development",
     desc: "Harness the power of modern web frameworks to build progressive web apps that scale, Interactive, feature-filled, and highly interactive.",
+  },
+  {
+    img: "./img/pf1-1.jpg",
+    title: "Graphics Design",
+    desc: "UI/UX is the first thing that interacts with the users and so needs to be impeccable. Open xcel has a highly creative user experience research and design team.",
   },
 ];
 const AndroidDevelopment = () => {
@@ -257,7 +257,6 @@ const ImgText = styled.p`
 const TitleBox = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 40px;
   flex-direction: column;
   align-items: center;
 `;
@@ -267,6 +266,7 @@ const Title = styled.p`
   border-bottom: 3px solid #d17f1b;
   font-size: 40px;
   font-weight: 700;
+  padding-top: 80px;
   @media (max-width: 480px) {
     font-size: 30px;
   }

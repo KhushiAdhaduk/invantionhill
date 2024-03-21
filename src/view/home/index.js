@@ -5,7 +5,7 @@ import Service from "./Service";
 import Portfolio from "./Portfolio";
 import Team from "./Team";
 import Contact from "./contact";
-import Footer from "./Footer";
+import Footer from "../common/Footer";
 
 const Home = () => {
   return (

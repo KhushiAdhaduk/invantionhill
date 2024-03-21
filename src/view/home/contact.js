@@ -123,6 +123,7 @@ const Contain = styled.div`
 const Title = styled.p`
   color: var(--color--primary);
   border-bottom: 3px solid #d17f1b;
+  padding-top: 60px;
   font-size: 40px;
   font-weight: 700;
   @media (max-width: 480px) {
@@ -142,7 +143,7 @@ const Text = styled.p`
 const TitleBox = styled.div`
   display: flex;
   justify-content: center;
-  margin: 40px 0 20px 0;
+  margin-bottom: 20px;
   flex-direction: column;
   align-items: center;
 `;

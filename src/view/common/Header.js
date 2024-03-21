@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton } from "@mui/material";
@@ -9,6 +9,8 @@ const Header = () => {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+  const location = useLocation();
+  console.log(location.pathname);
 
   return (
     <div
@@ -30,11 +32,24 @@ const Header = () => {
               </Link>
             </LogoBox>
             <Menu>
-              <CustomLink href="#home">Home</CustomLink>
-              <CustomLink href="#services">Services</CustomLink>
-              <CustomLink href="#portfolio">Portfolio</CustomLink>
-              <CustomLink href="#team">Team</CustomLink>
-              <CustomLink href="#contact">Contact</CustomLink>
+              {location.pathname === "/" ? (
+                <>
+                  <A href="/">Home</A>
+                  <A href="#services">Services</A>
+                  <A href="#portfolio">Portfolio</A>
+                  <A href="#team">Team</A>
+                  <A href="#contact">Contact</A>
+                </>
+              ) : (
+                <>
+                  <CustomLink to="/">Home</CustomLink>
+                  <CustomLink to="/">Services</CustomLink>
+                  <CustomLink to="/">Portfolio</CustomLink>
+                  <CustomLink to="/">Team</CustomLink>
+                  <CustomLink to="/">Contact</CustomLink>
+                </>
+              )}
+
               <Link to="/request">
                 <Button>REQUEST QUOTE</Button>
               </Link>
@@ -49,11 +64,23 @@ const Header = () => {
       </div>
       <div style={{ position: "relative" }}>
         <MobileMenuItem hidden={!isOpen}>
-          <MobileCustomLink href="#">Home</MobileCustomLink>
-          <MobileCustomLink href="#services">Services</MobileCustomLink>
-          <MobileCustomLink href="#portfolio">Portfolio</MobileCustomLink>
-          <MobileCustomLink href="#team">Team</MobileCustomLink>
-          <MobileCustomLink href="#contact">Contact</MobileCustomLink>
+          {location.pathname === "/" ? (
+            <>
+              <MobileA href="/">Home</MobileA>
+              <MobileA href="#services">Services</MobileA>
+              <MobileA href="#portfolio">Portfolio</MobileA>
+              <MobileA href="#team">Team</MobileA>
+              <MobileA href="#contact">Contact</MobileA>
+            </>
+          ) : (
+            <>
+              <MobileCustomLink to="/">Home</MobileCustomLink>
+              <MobileCustomLink to="/">Services</MobileCustomLink>
+              <MobileCustomLink to="/">Portfolio</MobileCustomLink>
+              <MobileCustomLink to="/">Team</MobileCustomLink>
+              <MobileCustomLink to="/">Contact</MobileCustomLink>
+            </>
+          )}
           <Link to="/request.">
             <MobileButton>REQUEST QUOTE</MobileButton>
           </Link>
@@ -98,7 +125,52 @@ const Menu = styled.div`
   }
 `;
 
-const CustomLink = styled.a`
+const A = styled.a`
+  text-decoration: none;
+  display: block;
+  padding: 10px 7px;
+  font-size: 20px;
+  font-weight: 700;
+
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    #d17f1b,
+    #d17f1b 50%,
+    var(--color--primary) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.5s ease-in-out;
+  &:before {
+    display: block;
+    content: "";
+    width: 0;
+    height: 3px;
+    bottom: 5px;
+    left: 0;
+    bottom: -3px;
+    z-index: 0;
+    position: absolute;
+    background: #d17f1b;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover {
+    background-position: 0%;
+  }
+
+  &:hover:before {
+    width: 100%;
+  }
+`;
+
+const CustomLink = styled(Link)`
   text-decoration: none;
   display: block;
   padding: 10px 7px;
@@ -182,7 +254,21 @@ const MobileMenuItem = styled.div`
   height: ${(props) => (props.hidden ? "0" : "45vh")};
 `;
 
-const MobileCustomLink = styled.a`
+const MobileCustomLink = styled(Link)`
+  display: block;
+  padding: 15px 10px;
+  color: var(--color--primary);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  &:hover {
+    color: var(--color--primary-mobile--hover);
+    background-color: var(--color--primary--mobile--bg);
+    border-left: 3px solid var(--color--primary);
+  }
+`;
+
+const MobileA = styled.a`
   display: block;
   padding: 15px 10px;
   color: var(--color--primary);

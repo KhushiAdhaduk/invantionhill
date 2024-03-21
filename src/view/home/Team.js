@@ -63,7 +63,7 @@ const Team = () => {
           </TeamItem>
           <TeamItem>
             <Img src="./img/team_men.jpg" alt="Team1" />
-            <Name>Vinit Patel</Name>
+            <Name>Vinit Limbachiya</Name>
             <Position>Intern Mobile Developer</Position>
           </TeamItem>
           <TeamItem>
@@ -82,7 +82,8 @@ export default Team;
 const TitleBox = styled.div`
   display: flex;
   justify-content: center;
-  margin: 30px 0 20px 0;
+  margin: 0 0 20px 0;
+  padding-top: 80px;
   flex-direction: column;
   align-items: center;
 `;

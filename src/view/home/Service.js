@@ -154,7 +154,7 @@ const TitleBox = styled.div`
 const Title = styled.p`
   color: var(--color--primary);
   border-bottom: 3px solid #d17f1b;
-  margin-top: 20px;
+  padding-top: 60px;
   font-size: 40px;
   font-weight: 700;
   @media (max-width: 480px) {
@@ -205,7 +205,7 @@ const Icon = styled.div`
   transition: all 0.3s;
 `;
 const CardItem = styled.div`
-min-height: 350px;
+min-height: 400px;
 margin: 20px;
   display: flex;
   flex-direction: column;
