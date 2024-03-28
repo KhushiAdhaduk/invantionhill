@@ -25,7 +25,7 @@ const Footer = () => {
                   </CustomLink>
                 </Li>
                 <Li>
-                  <CustomLink>Website Design</CustomLink>
+                  <CustomLink to="/website-design">Website Design</CustomLink>
                 </Li>
               </Ol>
             </FooterItem>
