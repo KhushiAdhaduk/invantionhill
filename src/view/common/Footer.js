@@ -20,7 +20,9 @@ const Footer = () => {
                   </CustomLink>
                 </Li>
                 <Li>
-                  <CustomLink>Mobile Responsive Theme Development</CustomLink>
+                  <CustomLink to="/mobile-theme">
+                    Mobile Responsive Theme Development
+                  </CustomLink>
                 </Li>
                 <Li>
                   <CustomLink>Website Design</CustomLink>
