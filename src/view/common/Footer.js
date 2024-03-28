@@ -33,7 +33,9 @@ const Footer = () => {
               <Title>Mobile App Development</Title>
               <Ol>
                 <Li>
-                  <CustomLink>Android Apps Development</CustomLink>
+                  <CustomLink to="/mobile-development">
+                    Android Apps Development
+                  </CustomLink>
                 </Li>
                 <Li>
                   <CustomLink>iPad Apps Development</CustomLink>

@@ -6,6 +6,7 @@ import LogoPage from "./page/design/LogoPage";
 import CustomWebDevelopmentPage from "./page/design/CustomWebDevelopmentPage";
 import MobileThemePage from "./page/design/MobileThemePage";
 import WebsiteDesignPage from "./page/design/WebsiteDesignPage";
+import AndroidAppDevelopmentPage from "./page/mobileappdevelopment/AndroidAppDevelopmentPage";
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
         <Route path="/custom-web" Component={CustomWebDevelopmentPage} />
         <Route path="/mobile-theme" Component={MobileThemePage} />
         <Route path="/website-design" Component={WebsiteDesignPage} />
+        <Route
+          path="/mobile-development"
+          Component={AndroidAppDevelopmentPage}
+        />
       </Routes>
     </BrowserRouter>
   );
